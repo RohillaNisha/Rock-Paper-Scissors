@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="main.js" defer></script>
+
+    <title>Rock Paper Scissor</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <a id="home" href="Home.html"> HOME</a>
+        <a id="gamerules" href="Gamerules.html"> GAME RULES</a>
+        <a id="gamehistory" href="Gamehistory.html"> GAME HISTORY</a>
+      </nav>
+    </header>
+    <div class="game-area-container">
+      <h1>ROCK PAPER SCISSORS</h1>
+      <h2 id="text">Try Your Luck!</h2>
+      <!-- container -->
+      <div class="container">
+        <!-- section for You -->
+        <div class="sectionYou">
+          <!-- section for Your score -->
+          <div class="infoYou">
+            <h3>You : <span id="playerScore">0</span></h3>
+          </div>
+          <!-- section for Your icon -->
+          <div class="showYou">
+            <i class="fas fa-hand-rock"></i>
+          </div>
+        </div>
+        <!-- section for Computer -->
+        <div class="sectionComputer">
+          <!-- section for computer score -->
+          <div class="infoComputer">
+            <h3>Computer : <span id="computerScore">0</span></h3>
+          </div>
+          <!-- section for computer icon -->
+          <div class="showComputer">
+            <i class="fas fa-hand-scissors"></i>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="color: rgb(233, 33, 19)" id="text2">Choose One !</h2>
+
+      <div class="selection">
+        <button class="fas fa-hand-rock" id="Rock"></button>
+        <button class="fas fa-hand-paper" id="Paper"></button>
+        <button class="fas fa-hand-scissors" id="Scissors"></button>
+      </div>
+      <div class="table-container">
+        <table id="heading-table">
+          <tr>
+            <th>Player</th>
+            <th>Computer</th>
+            <th>Winner</th>
+          </tr>
+        </table>
+        <table id="data-table">
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
