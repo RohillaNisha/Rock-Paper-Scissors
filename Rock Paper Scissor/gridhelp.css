@@ -1,0 +1,100 @@
+body {
+  height: 80vh;
+}
+.container {
+  min-height: 100%;
+  width: 70%;
+  outline: 1px dotted black;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1.5fr 2.5fr 2.5fr 1.5fr;
+  grid-template-rows: 1fr 2.5fr 2.5fr 2.5fr 1fr;
+  grid-template-areas:
+    "header header header header"
+    " aside p1 p2 p3"
+    "aside p4 p5 p6"
+    "aside section section section"
+    "footer footer footer footer";
+}
+
+.header {
+  text-align: center;
+  grid-area: header;
+  background-color: aqua;
+}
+
+.aside {
+  text-align: center;
+  align-self: stretch;
+  grid-area: aside;
+  background-color: green;
+}
+.p1 {
+  text-align: center;
+  grid-area: p1;
+  background-color: blueviolet;
+  color: black;
+  padding: 10px;
+}
+
+.p2 {
+  text-align: center;
+  grid-area: p2;
+  background-color: blueviolet;
+  color: black;
+  padding: 10px;
+}
+
+.p3 {
+  text-align: center;
+  grid-area: p3;
+  background-color: aquamarine;
+  color: black;
+  padding: 10px;
+}
+
+.p4 {
+  text-align: center;
+  grid-area: p4;
+  background-color: cadetblue;
+  color: black;
+  padding: 10px;
+}
+
+.p5 {
+  text-align: center;
+  grid-area: p5;
+  background-color: cornflowerblue;
+  color: black;
+  padding: 10px;
+}
+.p6 {
+  text-align: center;
+  grid-area: p6;
+  background-color: darkcyan;
+  color: black;
+  padding: 10px;
+}
+
+.main {
+  text-align: center;
+  grid-area: section;
+  background-color: chocolate;
+}
+
+.foot {
+  text-align: center;
+  grid-area: footer;
+  background-color: aquamarine;
+}
+
+/*
+  .p6 {
+    background-color: darkseagreen;
+  }
+  .p7 {
+    background-color: hotpink;
+    grid-column: 2 / span 2;
+  }
+  
+  */
