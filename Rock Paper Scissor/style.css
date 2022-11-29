@@ -27,6 +27,14 @@
   align-items: center;
 }
 
+#restart-button {
+  font-family: cursive;
+  margin: 1rem;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
 #home,
 #gamerules,
 #gamehistory {
@@ -63,7 +71,8 @@ a:hover {
   padding-top: 5%;
 }
 
-#Button {
+#Button,
+#restart-button {
   background-color: rgba(230, 25, 0, 0.25);
   width: 100px;
   height: 60px;

@@ -17,7 +17,6 @@ const text2 = document.getElementById("text2");
 
 let winner;
 let myArray = [];
-let tableArray = [];
 
 // Game Functionality: Setting forEach function for the buttons.
 const game = () => {
@@ -44,7 +43,6 @@ const game = () => {
         text.innerHTML = "It's a Tie ! ";
         text2.innerHTML = text.innerHTML;
         myArray.push("Tie");
-        console.log(myArray);
       } else if (
         showIcon.className === randomClasses[0] &&
         computerShowIcon.className === randomClasses[2]
@@ -56,7 +54,6 @@ const game = () => {
         text2.innerHTML = text.innerHTML;
         text2.style.color = "rgb(1, 146, 1)";
         myArray.push("Player");
-        console.log(myArray);
       } else if (
         showIcon.className === randomClasses[0] &&
         computerShowIcon.className === randomClasses[1]
@@ -68,7 +65,6 @@ const game = () => {
         text2.innerHTML = text.innerHTML;
         text2.style.color = "red";
         myArray.push("Computer");
-        console.log(myArray);
       } else if (
         showIcon.className === randomClasses[1] &&
         computerShowIcon.className === randomClasses[2]
@@ -80,7 +76,6 @@ const game = () => {
         text2.innerHTML = text.innerHTML;
         text2.style.color = "red";
         myArray.push("Computer");
-        console.log(myArray);
       } else if (
         showIcon.className === randomClasses[1] &&
         computerShowIcon.className === randomClasses[0]
@@ -92,7 +87,6 @@ const game = () => {
         text2.innerHTML = text.innerHTML;
         text2.style.color = "rgb(1, 146, 1)";
         myArray.push("Player");
-        console.log(myArray);
       } else if (
         showIcon.className === randomClasses[2] &&
         computerShowIcon.className === randomClasses[0]
@@ -104,7 +98,6 @@ const game = () => {
         text2.innerHTML = text.innerHTML;
         text2.style.color = "red";
         myArray.push("Computer");
-        console.log(myArray);
       } else if (
         showIcon.className === randomClasses[2] &&
         computerShowIcon.className === randomClasses[1]
@@ -116,37 +109,40 @@ const game = () => {
         text2.innerHTML = text.innerHTML;
         text2.style.color = "rgb(1, 146, 1)";
         myArray.push("Player");
-        console.log(myArray);
       }
 
       /* i=1 j= */
       for (let i = 0; i < table.rows.length; i++) {
         for (let j = 0; j < table.rows[i].cells.length; j++) {
           table.rows[i].cells[j].innerHTML = myArray[i * 3 + j];
+          if (myArray[i * 3 + j] == null || myArray[i * 3 + j] == undefined) {
+            table.rows[i].cells[j].innerHTML = ".....";
+          }
         }
       }
-      if (playerScore >= 6) {
+      if (playerScore === 6) {
         text.innerHTML = " You are a champion... ";
         text2.innerHTML = "You are a champion... ";
-      } else if (computerScore >= 6) {
+        if (playerScore >= 6) {
+          document.getElementById("Rock").disabled = true;
+          document.getElementById("Paper").disabled = true;
+          document.getElementById("Scissors").disabled = true;
+        }
+      } else if (computerScore === 6) {
         text.innerHTML = " Computer beats You...";
         text2.innerHTML = " Computer beats You...";
+        if (computerScore >= 6) {
+          document.getElementById("Rock").disabled = true;
+          document.getElementById("Paper").disabled = true;
+          document.getElementById("Scissors").disabled = true;
+        }
       }
     });
   });
 };
 
-/* if (circleCollision(enemy, player)) {
-      enemiesBalls.splice(i, 1);
-      player.lives -= 1;
-
-      if (player.lives <= 0) {
-        alert("Game Over!");
-        // startar om spelet när man klickar på ok
-        window.location.reload();;
-      }
-      continue;
-    }
-  } */
+function restartGame() {
+  window.location.reload();
+}
 
 game();
