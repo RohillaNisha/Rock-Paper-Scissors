@@ -6,14 +6,12 @@
 .container-home {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(
-    to right top,
-    #051937,
-    #004d7a,
-    #008793,
-    #00bf72,
-    #a8eb12
-  );
+  background-image: linear-gradient(to right top,
+      #051937,
+      #004d7a,
+      #008793,
+      #00bf72,
+      #a8eb12);
 }
 
 .navbar {
@@ -28,7 +26,7 @@
 }
 
 #restart-button {
-  font-family: cursive;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: 1rem;
   font-size: 16px;
   font-weight: bold;
@@ -64,6 +62,7 @@ a:hover {
   border-radius: 20%;
   border: 3px solid black;
 }
+
 #section1 {
   visibility: visible;
   position: relative;
@@ -106,15 +105,14 @@ a:hover {
 
 header {
   border: 1px solid black;
-  background-image: linear-gradient(
-    to right top,
-    #051937,
-    #004d7a,
-    #008793,
-    #00bf72,
-    #a8eb12
-  );
+  background-image: linear-gradient(to right top,
+      #051937,
+      #004d7a,
+      #008793,
+      #00bf72,
+      #a8eb12);
 }
+
 /* MAIN GAME */
 
 .sectionScore {
@@ -129,6 +127,7 @@ h1 {
   text-align: center;
   margin-top: 50px;
 }
+
 #selectionButtons {
   text-align: center;
 }
@@ -144,16 +143,15 @@ h1 {
 
 .sectionYou,
 .sectionComputer {
-  background-image: linear-gradient(
-    to right top,
-    #051937,
-    #004d7a,
-    #008793,
-    #00bf72,
-    #12e4eb
-  );
+  background-image: linear-gradient(to right top,
+      #051937,
+      #004d7a,
+      #008793,
+      #00bf72,
+      #12e4eb);
   width: 30%;
 }
+
 .showYou {
   padding: 20px;
   font-size: 100px;
@@ -199,12 +197,14 @@ td {
   width: 3.7rem;
   height: 1.5rem;
 }
+
 #heading-table {
   margin-top: 5rem;
   border-top: 4px solid black;
   border-left: 4px solid black;
   border-right: 4px solid black;
 }
+
 th {
   width: 3.95rem;
 }
@@ -227,6 +227,7 @@ th {
 .rule-body {
   background-color: #9edac2;
 }
+
 /*.rules-container {
   display: flex;
   flex-direction: column;
@@ -264,9 +265,11 @@ th {
 #rock-img {
   grid-area: photo1;
 }
+
 #paper-img {
   grid-area: photo2;
 }
+
 #scissors-img {
   grid-area: photo3;
 }
@@ -276,6 +279,7 @@ th {
   font-size: 25px;
   align-self: center;
 }
+
 .symbol-paper {
   grid-area: name2;
   font-size: 25px;
@@ -292,10 +296,12 @@ th {
   grid-area: des1;
   font-size: 20px;
 }
+
 .symbol-text2 {
   grid-area: des2;
   font-size: 20px;
 }
+
 .symbol-text3 {
   grid-area: des3;
   font-size: 20px;
