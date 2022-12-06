@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="nav-bar.css">
+    <link rel="stylesheet" href="main-game.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />     
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbutton">
+            <i class="fas fa-bars"></i>
+        </label>
+        
+        <ul class="unordered-list">
+            <li class="nav-list"><a class="active" href="home.html">Home</a></li>
+            <li class="nav-list"><a href="game-rules.html">Game Rules</a></li>
+            <li class="nav-list"><a href="#">Game History</a></li>
+            <li class="nav-list"><a href="#">About us</a></li>
+        </ul>
+    </nav>
+
+   <!-- MAIN GAME -->
+<div class="game-container">
+    <section class="score-section">
+        <div class="you">
+        <h2>You: <span id="user-choice"></span></h2>
+        <img class="you-score" src="" alt="">
+        </div>
+
+        <div class="computer">
+        <h2>Computer: <span id="computer-choice"></span></h2>
+        <img class="computer-score" src="" alt="">
+        </div>
+
+        
+        <h2>Result: <span id="result"></span></h2>
+    </section>
+    <h3>Choose one: </h3>
+    <section class="choose-section">
+        <button class="button" id="rock"><img src="./images/rock.png" alt=""></button>
+        <button class="button" id="paper"><img src="./images/paper.png" alt=""></button>
+        <button class="button" id="scissors"><img src="./images/scissors.png" alt=""></button>
+    </section>
+
+</div> <!-- game-container -->
+</body>
+</html>

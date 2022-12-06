@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-container{
+    border: 2px solid orange;
+    width: 1000px;
+    height: 700px;
+}
+
+.score-section{
+  /*   border: 2px solid green; */
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+}
+
+.choose-section{
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+img{
+    background-color: white;
+}
+
+h3{
+padding-top:  60px;
+font-size: 30px;
+padding-left: 20px;
+
+}
+
+button{
+    border: 0;
+}
+
