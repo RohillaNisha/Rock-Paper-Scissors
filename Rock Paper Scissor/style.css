@@ -1,38 +1,98 @@
 * {
-  margin: 0;
-  padding: 0;
+  color: antiquewhite;
 }
 
+h1 {
+  color: #12e4eb;
+}
+body {
+  margin: 50px;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #18191f;
+  border: 3px solid greenyellow;
+  border-radius: 10px;
+}
+
+#user-score, #computer-score {
+  font-size: 50px;
+}
 .container-home {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(to right top,
-      #051937,
-      #004d7a,
-      #008793,
-      #00bf72,
-      #a8eb12);
+  background-color: antiquewhite;
+  
 }
 
 .navbar {
   display: flex;
-  /* padding-left: 200px; */
-  /*  align-self: stretch; */
   justify-content: space-around;
-
   height: 50px;
   width: 100%;
   align-items: center;
 }
 
-#restart-button {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin: 1rem;
-  font-size: 16px;
+#home-icon,
+#history-icon,
+#rule-icon {
+  margin-right: 10px;
+}
+a {
+  color: black;
   font-weight: bold;
-  border: 2px solid black;
+  font-size: 20px;
+  text-decoration: none;
 }
 
+#restart-button {
+  margin-top: 1vh;
+  margin-bottom: 3vh;
+  margin-left: 43vw;
+  width: 140px;
+  height: 80px;
+  border-radius: 25px;
+  border: 3px solid blue;
+  font-size: 25px;
+  background-color: #18191f;
+  color: #555;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+#restart-button:hover {
+  color: #00f3ff;
+  text-shadow: 0 0 15px #00f3ff;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#rock,
+#paper,
+#scissors {
+  
+  border-radius: 25px;
+  border: 3px solid blue;
+  font-size: 25px;
+  background-color: #18191f;
+  color: #555;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+#rock:hover {
+  color: #00f3ff;
+  text-shadow: 0 0 15px #00f3ff;
+}
+
+#paper:hover {
+  color: greenyellow;
+  text-shadow: 0 0 15px greenyellow;
+}
+
+#scissors:hover {
+  color: red;
+  text-shadow: 0 0 15px red;
+}
 #home,
 #gamerules,
 #gamehistory {
@@ -42,37 +102,30 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* a.active,
-a:hover {
-  background: #54a1db;
-  transition: 0.5s;
-} */
-
+/* 
 #rps-title,
 #gif {
   margin-bottom: 40px;
-}
-
+} */
+/* 
 .start-button {
-  display: flex;
   justify-content: center;
-}
-
+} */
+/* 
 #gif {
   border-radius: 20%;
   border: 3px solid black;
-}
-
+} */
+/* 
 #section1 {
   visibility: visible;
   position: relative;
   text-align: center;
   padding-top: 5%;
-}
-
+} */
+/* 
 #Button,
 #restart-button {
-  background-color: rgba(230, 25, 0, 0.25);
   width: 100px;
   height: 60px;
   padding: 10px;
@@ -84,35 +137,47 @@ a:hover {
   font-size: 15px;
 }
 
-#Button:hover {
-  background-color: rgba(230, 25, 0, 0.75);
-  color: black;
+button:hover {
+  color: #00f3ff;
+  text-shadow: 0 0 15px #00f3ff;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
+button:active {
+  box-shadow: 0 4px #666;
+  transform: translateY(4px);
+} */
+/* 
+#Button:hover {
+  background-color: #008793;
+  color: black;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+} */
+/* 
 #Button:active {
   box-shadow: 0 4px #666;
   transform: translateY(4px);
-}
+} */
 
 #home,
 #gamerules,
 #gamehistory {
   text-decoration: none;
-  /* padding-left: 10%; */
 }
 
 header {
   border: 1px solid black;
-  background-image: linear-gradient(to right top,
-      #051937,
-      #004d7a,
-      #008793,
-      #00bf72,
-      #a8eb12);
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
 }
-
 /* MAIN GAME */
 
 .sectionScore {
@@ -127,7 +192,6 @@ h1 {
   text-align: center;
   margin-top: 50px;
 }
-
 #selectionButtons {
   text-align: center;
 }
@@ -135,23 +199,26 @@ h1 {
 .container {
   display: flex;
   flex-direction: row;
-  gap: 100px;
   justify-content: center;
-  font-size: 50px;
-  /* background-color: rgb(208, 240, 250);  */
+  gap: 100px;
+  font-size: 30px;
+
 }
 
 .sectionYou,
 .sectionComputer {
-  background-image: linear-gradient(to right top,
-      #051937,
-      #004d7a,
-      #008793,
-      #00bf72,
-      #12e4eb);
-  width: 30%;
+  text-align: center;
+ /*  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #12e4eb
+  ); */
+ 
+  width: 23rem;
 }
-
 .showYou {
   padding: 20px;
   font-size: 100px;
@@ -169,15 +236,15 @@ h1 {
   justify-content: center;
 }
 
-#Rock,
-#Paper,
-#Scissors {
+#rock,
+#paper,
+#scissors {
   text-align: center;
   width: 200px;
   height: 100px;
   font-size: 40px;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
@@ -186,11 +253,6 @@ h2 {
   text-align: center;
 }
 
-button:hover {
-  transform: translate(0px, 5px);
-  -webkit-transform: translate(0px, 5px);
-  box-shadow: 0px 1px 0px 0px;
-}
 
 td {
   border: 1px solid black;
@@ -198,41 +260,10 @@ td {
   height: 1.5rem;
 }
 
-#heading-table {
-  margin-top: 5rem;
-  border-top: 4px solid black;
-  border-left: 4px solid black;
-  border-right: 4px solid black;
-}
-
-th {
-  width: 3.95rem;
-}
-
-#data-table {
-  border-bottom: 4px solid black;
-  border-left: 4px solid black;
-  border-right: 4px solid black;
-}
-
-.table-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Game Rules Styling */
 
 .rule-body {
-  background-color: #9edac2;
+  background-color: #18191f;
 }
-
-/*.rules-container {
-  display: flex;
-  flex-direction: column;
-  margin-right: 5rem;
-}*/
 
 .rule-titles {
   display: flex;
@@ -265,11 +296,9 @@ th {
 #rock-img {
   grid-area: photo1;
 }
-
 #paper-img {
   grid-area: photo2;
 }
-
 #scissors-img {
   grid-area: photo3;
 }
@@ -279,7 +308,6 @@ th {
   font-size: 25px;
   align-self: center;
 }
-
 .symbol-paper {
   grid-area: name2;
   font-size: 25px;
@@ -296,12 +324,10 @@ th {
   grid-area: des1;
   font-size: 20px;
 }
-
 .symbol-text2 {
   grid-area: des2;
   font-size: 20px;
 }
-
 .symbol-text3 {
   grid-area: des3;
   font-size: 20px;
