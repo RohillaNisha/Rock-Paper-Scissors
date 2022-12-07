@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -12,117 +13,60 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="main.js" defer></script>
-
-    <title>Rock Paper Scissor</title>
   </head>
 
   <body>
     <header>
       <nav class="navbar">
-        <a id="home" href="Home.html"> HOME</a>
+        <a id="home" href="Home2.html"> HOME</a>
         <a id="gamerules" href="Gamerules.html"> GAME RULES</a>
         <a id="gamehistory" href="Gamehistory.html"> GAME HISTORY</a>
       </nav>
     </header>
+
     <div class="game-area-container">
       <h1>ROCK PAPER SCISSORS</h1>
-      <button id="restart-button" onclick="restartGame()">Restart Game</button>
-      <h2 id="text">Try Your Luck!</h2>
-      <!-- container -->
+      <div class="restart-game">
+        <button id="restart-button" onclick="restartGame()">
+          Restart Game
+        </button>
+      </div>
       <div class="container">
-        <!-- section for You -->
         <div class="sectionYou">
-          <!-- section for Your score -->
           <div class="infoYou">
-            <h3>You : <span id="playerScore">0</span></h3>
+            <h3>
+              <span id="playerName">You </span> <span> :</span>
+              <span id="playerScore"> 0</span>
+            </h3>
           </div>
-          <!-- section for Your icon -->
+
           <div class="showYou">
             <i class="fas fa-hand-rock"></i>
           </div>
         </div>
-        <!-- section for Computer -->
+
         <div class="sectionComputer">
-          <!-- section for computer score -->
           <div class="infoComputer">
             <h3>Computer : <span id="computerScore">0</span></h3>
           </div>
-          <!-- section for computer icon -->
           <div class="showComputer">
-            <i class="fas fa-hand-scissors"></i>
+            <i class="fas fa-hand-rock"></i>
           </div>
         </div>
       </div>
 
-      <h2 style="color: rgb(233, 33, 19)" id="text2">Choose One !</h2>
+      <h2 style="color: rgb(233, 33, 19)" id="result">Make your move!</h2>
 
       <div class="selection">
-        <button class="fas fa-hand-rock" id="Rock"></button>
-        <button class="fas fa-hand-paper" id="Paper"></button>
-        <button class="fas fa-hand-scissors" id="Scissors"></button>
-      </div>
-      <div class="table-container">
-        <table id="heading-table">
-          <tr>
-            <th>Player</th>
-            <th>Computer</th>
-            <th>Winner</th>
-          </tr>
-        </table>
-        <table id="data-table">
-          <tr id="tr1">
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr id="tr2">
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr id="tr3">
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
+        <button class="fas fa-hand-rock" id="rock"></button>
+        <button class="fas fa-hand-paper" id="paper"></button>
+        <button class="fas fa-hand-scissors" id="scissors"></button>
       </div>
     </div>
   </body>
+  <script>
+    const playerName = localStorage.getItem("player-name");
+    document.getElementById("playerName").textContent = playerName;
+  </script>
+  <script src="main.js"></script>
 </html>
