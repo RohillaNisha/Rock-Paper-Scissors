@@ -5,16 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="table.css">
     <title>Rock Paper Scissor</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <a id="home" href="Home2.html"> HOME</a>
+        <a id="home" href="intro.html"> HOME</a>
         <a id="gamerules" href="Gamerules.html"> GAME RULES</a>
         <a id="gamehistory" href="Gamehistory.html"> GAME HISTORY</a>
       </nav>
     </header>
+    
+    <div class="table-container">
+    <div class="glowing-table">
     <table class="scoreBoard">
       <tr>
         <th>PLAYER</th>
@@ -70,6 +74,9 @@
         <td class="wins"></td>
       </tr>
     </table>
+  </div>
+</div> <!-- table-container -->
+
   </body>
   <script>
     let table = document.querySelector(".dataTable");

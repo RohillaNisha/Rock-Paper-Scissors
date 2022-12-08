@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <link href='https://fonts.googleapis.com/css?family=Sacramento:400' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="intro.css" />
+</head>
+
+<body>
+  <div class="container-home">
+    <nav class="navbar">
+      <a id="home" href="intro.html"></i>
+        <i id="home-icon" class="fa-sharp fa-solid fa-house-chimney"></i> HOME</a>
+      <a id="gamerules" href="Gamerules.html"><i id="rule-icon" class="fa-sharp fa-solid fa-table-list"></i> GAME
+        RULES</a>
+      <a id="gamehistory" href="Gamehistory.html"><i id="history-icon" class="fa-solid fa-clock-rotate-left"></i>
+        GAME HISTORY</a>
+    </nav>
+   </div>
+
+   <div class="title-intro">
+    <h1 class="neonText" class="neon">ROCK PAPER SCISSORS</h1>
+   </div> 
+
+
+<!--   <div class="icons-container">
+    <i id="paper1" class="fa-regular fa-hand"></i>
+    <i id="rock1" class="fa-regular fa-hand-back-fist"></i>
+    <i id="scissors1" class="fa-regular fa-hand-scissors"></i>
+    <h1 id="rockname">ROCK</h1>
+    <h1 id="papername">PAPER</h1>
+    <h1 id="scissorsname">SCISSORS</h1>
+  </div> -->
+  <form id="form">
+    <div>
+      <label for="name" id="entername"> Enter your name : </label>
+      <input type="text" id="username"> <br> <br>
+    </div>
+    <div class="button-container">
+      <button type="submit" id="button"> Start Game </button>
+    </div>
+  </form>
+
+  <!-- </div class="start-button">
+    <a href="maingame.html"> <button id="Button">START GAME</button></a>
+    </div> -->
+</body>
+<script> const form = document.getElementById("form");
+  const username = document.getElementById("username");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const playerName = username.value;
+
+    localStorage.setItem("player-name", playerName);
+
+    window.location.href = "maingame.html";
+  });</script>
+<script src="main.js"> </script>
+
+</html>
