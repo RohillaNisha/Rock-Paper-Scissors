@@ -31,7 +31,7 @@ function win() {
 function lose() {
   computerScore++;
   myArray.push("computer");
-  resultDisplay.innerHTML = "You loose!";
+  resultDisplay.innerHTML = "You lose!";
   document.querySelector("#playerScore").innerHTML = playerScore;
   document.querySelector("#computerScore").innerHTML = computerScore;
   playerScoreCount();
@@ -77,17 +77,6 @@ function game(userChoice) {
 }
 
 function main() {
-  /*   let numbeOfButtons = document.querySelectorAll(".button").length;
-
-  for (let i = 0; i < numberOfButtons; i++){
-    document.querySelectorAll(".button")[i].addEventListener("click", function(){
-     let clickedBtn = event.target.className;
-      showIcon.className = clickedBtn;
-      game(event.target.id);
-  }
-
-   */
-
   buttons.forEach((btn) => {
     btn.addEventListener("click", (event) => {
       let clickedBtn = event.target.className;
@@ -104,15 +93,19 @@ function restartGame() {
   window.location.reload();
 }
 
+
+
+
 function playerScoreCount() {
+
   if (playerScore >= 3) {
     resultDisplay.innerHTML = "You are a champion!";
     let h = document.createElement("h1");
-    h.textContent = "Go to Game History tab to see your game history. ";
+    h.textContent = "Press on history to see your score";
     h.setAttribute("id", "h1");
     document.querySelector("body").appendChild(h);
 
-    let audiowin = new Audio("applause.wav");
+    let audiowin = new Audio("./audio/you-won.mp3");
     audiowin.play();
     document.getElementById("rock").disabled = true;
     document.getElementById("paper").disabled = true;
@@ -124,7 +117,7 @@ function playerScoreCount() {
     h.setAttribute("id", "h1");
     document.querySelector("body").appendChild(h);
 
-    let audiolose = new Audio("lose.wav");
+    let audiolose = new Audio("./audio/game-over.mp3");
     audiolose.play();
     document.getElementById("rock").disabled = true;
     document.getElementById("paper").disabled = true;
