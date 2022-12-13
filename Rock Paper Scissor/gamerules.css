@@ -1,0 +1,155 @@
+
+/****************************
+GAME RULES
+*****************************/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); 
+
+
+
+.gif{
+display: flex;
+justify-content: center; 
+margin-top: 40px;
+
+
+}
+
+img{
+    border: 4px solid #374650, 176, 234;
+    box-shadow: 0 0 15px #134b9f;
+    border-radius: 2%;
+
+    width: 400px;
+    height: auto;
+}
+
+.rule-titles{
+    text-align: center;
+    
+
+}
+
+body {
+    color: white;
+    margin: 50px;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #18191f;
+    border-radius: 10px;
+    height: 800px;
+    box-shadow:
+        0 0 0.1vw 0.2vw #fff7f7,
+        0 0 0.4vw 0.3vw #1f1f91,
+        0 0 4vw 0.2vw #04284f,
+
+        inset 0 0 1.5vw 0.4vw #0b95e5,
+        inset 0 0 0.4vw 0.2vw #7284e9,
+        inset 0 0 0.5vw 0.2vw #fff7f7;
+    border-radius: 0.2%;
+
+}
+
+.rule-titles {
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    margin-left: 3rem;
+    font-size: 24px;
+    letter-spacing: 2px;
+    /* color: #ffffff;
+    text-shadow: 0 0 15px #8d808b; */
+}
+
+.rules-text , .rules {
+    font-size: 18px;
+    margin-left: 6rem;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 30px;
+ 
+}
+
+.rules-paragraph{
+    width: 100%;
+    height: 250px;
+    margin: auto auto;
+
+}
+
+.rules{
+    padding: 4px;
+    
+}
+
+
+
+
+/****************************
+        NAV BAR
+*****************************/
+
+.navbar {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    padding-top: 20px;
+
+}
+
+#home-icon,
+#history-icon,
+#rule-icon {
+
+    margin-right: 10px;
+}
+
+
+
+
+a {
+    color: #ffffff;
+    text-shadow: 0 0 15px #f1f9f9;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+
+
+#rock-img {
+    grid-area: photo1;
+}
+
+#paper-img {
+    grid-area: photo2;
+}
+
+#scissors-img {
+    grid-area: photo3;
+}
+
+.symbol-rock {
+    grid-area: name1;
+    font-size: 25px;
+    align-self: center;
+}
+
+.symbol-paper {
+    grid-area: name2;
+    font-size: 25px;
+    align-self: center;
+}
+
+.symbol-scissors {
+    grid-area: name3;
+    font-size: 25px;
+    align-self: center;
+}
+
+.symbol-text1 {
+    grid-area: des1;
+    font-size: 20px;
+}
+

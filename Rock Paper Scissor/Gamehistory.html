@@ -4,17 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="gamehistoy.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
     <title>Rock Paper Scissor</title>
   </head>
   <body>
-    <header>
+   
+    <div class="container-home">
+  
       <nav class="navbar">
-        <a id="home" href="Home2.html"> HOME</a>
-        <a id="gamerules" href="Gamerules.html"> GAME RULES</a>
-        <a id="gamehistory" href="Gamehistory.html"> GAME HISTORY</a>
+        <a id="home" href="intro.html"><i id="home-icon" class="fa-sharp fa-solid fa-house-chimney"></i> HOME</a>
+        <a id="gamerules" href="gamerules.html"><i id="rule-icon" class="fa-sharp fa-solid fa-table-list"></i>RULES</a>
+        <a id="gamehistory" href="gamehistory.html"><i id="history-icon" class="fa-solid fa-clock-rotate-left"></i>HISTORY</a>
       </nav>
-    </header>
+     </div>
+  
+    
+    <div class="table-container">
+    <div class="border-glowing-table">
     <table class="scoreBoard">
       <tr>
         <th>PLAYER</th>
@@ -70,6 +82,9 @@
         <td class="wins"></td>
       </tr>
     </table>
+    </div>
+  </div> <!-- table-container -->
+
   </body>
   <script>
     let table = document.querySelector(".dataTable");

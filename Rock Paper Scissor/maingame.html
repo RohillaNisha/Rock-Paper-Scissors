@@ -5,38 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissor</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="maingame.css"/>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Lato&display=swap" rel="stylesheet">
   </head>
 
-  <body>
-    <header>
-      <nav class="navbar">
-        <a id="home" href="Home2.html"> HOME</a>
-        <a id="gamerules" href="Gamerules.html"> GAME RULES</a>
-        <a id="gamehistory" href="Gamehistory.html"> GAME HISTORY</a>
-      </nav>
-    </header>
 
-    <div class="game-area-container">
-      <h1>ROCK PAPER SCISSORS</h1>
+  <body>
+    <div class="container-home">
+      <nav class="navbar">
+        <a id="home" href="intro.html">
+          <i id="home-icon" class="fa-sharp fa-solid fa-house-chimney"></i> HOME</a>
+       <a id="gamerules" href="gamerules.html"><i id="rule-icon" class="fa-sharp fa-solid fa-table-list"></i> RULES</a> 
+       <a id="gamehistory" href="gamehistory.html"><i id="history-icon" class="fa-solid fa-clock-rotate-left"></i>HISTORY</a>
+      </nav>
+     </div>
+  
       <div class="restart-game">
-        <button id="restart-button" onclick="restartGame()">
-          Restart Game
-        </button>
+        <button id="restart-button" onclick="restartGame()"> Restart Game </button>
       </div>
-      <div class="container">
+      <div class="screen-container">
         <div class="sectionYou">
           <div class="infoYou">
             <h3>
-              <span id="playerName">You </span> <span> :</span>
-              <span id="playerScore"> 0</span>
+              <span id="playerName">You</span> <span>:</span>
+              <span id="playerScore">0</span>
             </h3>
           </div>
 
@@ -47,7 +41,7 @@
 
         <div class="sectionComputer">
           <div class="infoComputer">
-            <h3>Computer : <span id="computerScore">0</span></h3>
+            <h3>Computer: <span id="computerScore">0</span></h3>
           </div>
           <div class="showComputer">
             <i class="fas fa-hand-rock"></i>
@@ -55,7 +49,7 @@
         </div>
       </div>
 
-      <h2 style="color: rgb(233, 33, 19)" id="result">Make your move!</h2>
+      <h2 id="result">Make your move ...</h2>
 
       <div class="selection">
         <button class="fas fa-hand-rock" id="rock"></button>
