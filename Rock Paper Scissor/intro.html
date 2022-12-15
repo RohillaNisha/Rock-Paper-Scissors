@@ -30,30 +30,19 @@
         <div class="nav-links">
           <ul class="nav-list">
             <li>
-              <a id="home" href="intro.html"
-                ><i
-                  id="home-icon"
-                  class="fa-sharp fa-solid fa-house-chimney"
-                ></i>
-                HOME</a
-              >
+              <a id="home" href="intro.html"><i id="home-icon" class="fa-sharp fa-solid fa-house-chimney"></i>HOME</a>
             </li>
             <li>
-              <a id="gamerules" href="gamerules.html"
-                ><i id="rule-icon" class="fa-sharp fa-solid fa-table-list"></i
-                >RULES</a
-              >
+              <a id="gamerules" href="rules.html"><i id="rule-icon" class="fa-sharp fa-solid fa-table-list"></i>RULES</a>
             </li>
             <li>
-              <a id="gamehistory" href="gamehistory.html"
-                ><i id="history-icon" class="fa-solid fa-clock-rotate-left"></i
-                >HISTORY</a
-              >
+              <a id="gamehistory" href="history.html"><i id="history-icon"
+                  class="fa-solid fa-clock-rotate-left"></i>HISTORY</a>
             </li>
           </ul>
         </div>
       </nav>
-    </div>
+      </div>
 
     <div class="title-intro">
       <h1 class="neonText" class="neon">ROCK PAPER SCISSORS</h1>
@@ -70,10 +59,6 @@
         <button type="submit" id="button">Start Game</button>
       </div>
     </form>
-
-    <!-- </div class="start-button">
-    <a href="maingame.html"> <button id="Button">START GAME</button></a>
-    </div> -->
   </body>
   <script>
     const form = document.getElementById("form");
@@ -86,7 +71,7 @@
 
       localStorage.setItem("player-name", playerName);
 
-      window.location.href = "maingame.html";
+      window.location.href = "game.html";
     });
   </script>
   <script src="main.js"></script>

@@ -6,9 +6,6 @@ body {
   box-sizing: border-box;
   background-color: #18191f;
   border-radius: 10px;
-}
-
-body {
   height: 100vh;
   box-shadow: 0 0 0.1vw 0.2vw #fff7f7, 0 0 0.4vw 0.3vw #1f1f91,
     0 0 4vw 0.2vw #04284f, inset 0 0 1.5vw 0.4vw #0b95e5,
@@ -20,7 +17,6 @@ td {
   width: 18vw;
   height: 3vh;
   padding: 1vh;
-  /* px= 16px     1rem = 16px    1em= 16px*/
 }
 
 th {
@@ -32,20 +28,16 @@ th {
 
 table,
 td {
-  /* border: none; */
   text-align: center;
-  /* width: 25vw; */
 }
 
 .scoreBoard {
-
   margin-top: 15vh;
   border: 1px solid antiquewhite;
 }
 
 .scoreBoard,
 .dataTable {
-
   margin-bottom: 2vh;
   box-shadow: 0 0 0.1vw 0.2vw #fff7f7, 0 0 0.4vw 0.3vw #1f1f91,
     0 0 4vw 0.2vw #04284f, inset 0 0 1.5vw 0.4vw #0b95e5,
@@ -57,32 +49,13 @@ h2 {
   text-align: center;
 }
 
-/*   .border-glowing-table {
-    width: 300px;
-    height: 335px;
-    margin: 30px auto;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  } */
-
-/* VERSION 2 OF THE TABle */
-
 .border-glowing-table {
-  /* width:100vw;
-  height: 80vh; */
   color: #fff;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* position: relative; */
   font-family: "Press Start 2P", cursive;
 }
 
@@ -92,27 +65,17 @@ h2 {
 
 .navbar {
   color: white;
-  /* display: flex;
-  justify-content: space-around; */
   height: 50px;
   width: 100%;
-  /* align-items: center; */
   padding-top: 20px;
 }
 
 .burger-menu {
   display: none;
-
 }
-
 
 .RSP-brandname {
   display: none;
-}
-
-.nav-links {
-  /* display: flex; */
-  /* justify-content: space-around; */
 }
 
 .nav-links ul {
@@ -120,7 +83,6 @@ h2 {
   padding: 0;
   display: flex;
   justify-content: space-around;
-  /* border: 1px dotted white; */
   align-items: flex-end;
 }
 
@@ -146,39 +108,29 @@ a {
   text-decoration: none;
   text-align: right;
   margin-right: 0px;
-  /* padding: 1rem; */
 }
 
+/****************************
+   MEDIA Queries
+*****************************/
+
 @media (max-width: 539px) {
-
   .navbar {
-
     color: white;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* justify-content: right; */
     height: 50px;
     float: right;
-    /* padding-right: 30px; */
     width: 40%;
   }
 
   .burger-menu {
-
     display: flex;
     justify-content: center;
-
   }
 
-
-
   .nav-links ul {
-
     width: 100%;
     flex-direction: column;
     margin-top: 2vh;
-    /* margin-right: 5vw; */
   }
 
   .nav-links li:hover {
@@ -200,13 +152,11 @@ a {
     margin-top: 10vh;
     padding-bottom: 0vh;
     font-size: 25px;
-    /* padding-left: 3vw; */
     display: inline-block;
     color: #fff;
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #c344f5,
       0 0 82px #c344f5, 0 0 92px #c344f5, 0 0 102px #c344f5, 0 0 151px #c344f5;
   }
-
 
   .nav-links {
     display: none;
@@ -238,7 +188,6 @@ a {
     margin-top: 5px;
     margin-bottom: 5px;
     padding-left: 70px;
-    /* changes the icon position */
     justify-content: center;
   }
 
@@ -259,31 +208,24 @@ a {
 
   table,
   td {
-
     width: 5vw;
     margin-left: 5vw;
   }
 
-
   td {
-
     font-size: 10px;
     width: 1vw;
     height: 1vh;
-    /* px= 16px     1rem = 16px    1em= 16px*/
   }
 
   th {
     font-size: 10px;
     align-items: center;
-
   }
-
 
   .scoreBoard {
     margin-top: 45vh;
     margin-left: 5vw;
-
     border: 1px solid antiquewhite;
   }
 }
