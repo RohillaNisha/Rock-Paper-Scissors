@@ -10,18 +10,34 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #18191f;
-  border: 3px solid greenyellow;
+ 
   border-radius: 10px;
+ 
 }
 
-#user-score, #computer-score {
+body{
+   height: 800px;
+
+   box-shadow:
+   0 0 0.1vw  0.2vw #fff7f7,   
+   0 0 0.4vw  0.3vw #1f1f91, 
+   0 0   4vw  0.2vw #04284f,
+   
+   inset 0 0 1.5vw  0.4vw #0b95e5,
+   inset 0 0 0.4vw  0.2vw #7284e9,
+   inset 0 0 0.5vw  0.2vw #fff7f7;
+   border-radius: 0.2%;
+}
+
+#user-score,
+#computer-score {
   font-size: 50px;
 }
+
 .container-home {
   display: flex;
   flex-direction: column;
   background-color: antiquewhite;
-  
 }
 
 .navbar {
@@ -37,12 +53,7 @@ body {
 #rule-icon {
   margin-right: 10px;
 }
-a {
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
-  text-decoration: none;
-}
+
 
 #restart-button {
   margin-top: 1vh;
@@ -66,33 +77,18 @@ a {
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-#rock,
-#paper,
-#scissors {
-  
-  border-radius: 25px;
-  border: 3px solid blue;
-  font-size: 25px;
-  background-color: #18191f;
+
+#rock:disabled,
+#rock:hover:disabled,
+#paper:disabled,
+#paper:hover:disabled,
+#scissors:disabled,
+#scissors:hover:disabled {
   color: #555;
-  transition-duration: 0.4s;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  cursor: pointer;
-}
-#rock:hover {
-  color: #00f3ff;
-  text-shadow: 0 0 15px #00f3ff;
+  text-shadow: none;
+  border: 3px solid #555;
 }
 
-#paper:hover {
-  color: greenyellow;
-  text-shadow: 0 0 15px greenyellow;
-}
-
-#scissors:hover {
-  color: red;
-  text-shadow: 0 0 15px red;
-}
 #home,
 #gamerules,
 #gamehistory {
@@ -102,72 +98,13 @@ a {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* 
-#rps-title,
-#gif {
-  margin-bottom: 40px;
-} */
-/* 
-.start-button {
-  justify-content: center;
-} */
-/* 
-#gif {
-  border-radius: 20%;
-  border: 3px solid black;
-} */
-/* 
-#section1 {
-  visibility: visible;
-  position: relative;
-  text-align: center;
-  padding-top: 5%;
-} */
-/* 
-#Button,
-#restart-button {
-  width: 100px;
-  height: 60px;
-  padding: 10px;
-  margin: 20px;
-  border-radius: 12px;
-  transition-duration: 0.4s;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  cursor: pointer;
-  font-size: 15px;
-}
-
-button:hover {
-  color: #00f3ff;
-  text-shadow: 0 0 15px #00f3ff;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-
-button:active {
-  box-shadow: 0 4px #666;
-  transform: translateY(4px);
-} */
-/* 
-#Button:hover {
-  background-color: #008793;
-  color: black;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
-} */
-/* 
-#Button:active {
-  box-shadow: 0 4px #666;
-  transform: translateY(4px);
-} */
-
 #home,
 #gamerules,
 #gamehistory {
   text-decoration: none;
 }
 
-header {
+/* header {
   border: 1px solid black;
   background-image: linear-gradient(
     to right top,
@@ -177,7 +114,7 @@ header {
     #00bf72,
     #a8eb12
   );
-}
+} */
 /* MAIN GAME */
 
 .sectionScore {
@@ -202,13 +139,12 @@ h1 {
   justify-content: center;
   gap: 100px;
   font-size: 30px;
-
 }
 
 .sectionYou,
 .sectionComputer {
   text-align: center;
- /*  background-image: linear-gradient(
+  /*  background-image: linear-gradient(
     to right top,
     #051937,
     #004d7a,
@@ -216,7 +152,7 @@ h1 {
     #00bf72,
     #12e4eb
   ); */
- 
+
   width: 23rem;
 }
 .showYou {
@@ -230,36 +166,26 @@ h1 {
   font-size: 100px;
 }
 
-.selection {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 
-#rock,
-#paper,
-#scissors {
-  text-align: center;
-  width: 200px;
-  height: 100px;
-  font-size: 40px;
-  margin-top: 1rem;
-  margin-bottom: 5rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+.scoreBoard {
+  margin-top: 3rem;
+  border: 1px solid antiquewhite;
 }
 
 h2 {
   text-align: center;
 }
 
-
+th {
+  font-size: 18px;
+  align-items: center;
+  padding: 10px;
+}
 td {
-  border: 1px solid black;
-  width: 3.7rem;
+  border: 1px solid antiquewhite;
+  width: 6rem;
   height: 1.5rem;
 }
-
 
 .rule-body {
   background-color: #18191f;
@@ -279,19 +205,6 @@ td {
   margin-left: 2rem;
 }
 
-.shapes {
-  margin: 2rem;
-  min-height: 20%;
-  width: 60%;
-  display: grid;
-  justify-content: space-between;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 20rem 20rem 20rem;
-  grid-template-areas:
-    "photo1 photo2 photo3"
-    "name1 name2 name3"
-    "des1 des2 des3";
-}
 
 #rock-img {
   grid-area: photo1;

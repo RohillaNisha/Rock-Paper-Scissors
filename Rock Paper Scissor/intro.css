@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: #18191f;
+  border-radius: 10px;
+}
+
+body {
+  height: 100vh;
+  box-shadow: 0 0 0.1vw 0.2vw #fff7f7, 0 0 0.4vw 0.3vw #1f1f91,
+    0 0 4vw 0.2vw #04284f, inset 0 0 1.5vw 0.4vw #0b95e5,
+    inset 0 0 0.4vw 0.2vw #7284e9, inset 0 0 0.5vw 0.2vw #fff7f7;
+  border-radius: 0.2%;
+}
+
+/* .container-home {
+  display: flex;
+  flex-direction: column;
+} */
+
+.navbar {
+  color: white;
+  /* display: flex;
+  justify-content: space-around; */
+  height: 50px;
+  width: 100%;
+  /* align-items: center; */
+  padding-top: 20px;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.RSP-brandname {
+  display: none;
+}
+
+.nav-links {
+  /* display: flex; */
+  /* justify-content: space-around; */
+}
+
+.nav-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  /* border: 1px dotted white; */
+  align-items: flex-end;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a:hover {
+  color: #c344f5;
+}
+
+#home-icon,
+#history-icon,
+#rule-icon {
+  margin-right: 10px;
+}
+
+a {
+  color: #ffffff;
+  text-shadow: 0 0 15px #f1f9f9;
+  font-weight: bold;
+  font-size: 25px;
+  text-decoration: none;
+  text-align: right;
+  margin-right: 0px;
+  /* padding: 1rem; */
+}
+
+#form {
+  font-family: "Press Start 2P", cursive;
+
+  text-align: center;
+  margin-top: 30vh;
+}
+
+#entername {
+  color: antiquewhite;
+  font-size: 25px;
+}
+
+#username {
+  display: inline;
+  height: 25px;
+  background-color: #f0f6f6;
+  font-size: 1rem;
+}
+
+/****************************
+TITLE NEON TEXT 
+*****************************/
+
+.neonText {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #c344f5,
+    0 0 82px #c344f5, 0 0 92px #c344f5, 0 0 102px #c344f5, 0 0 151px #c344f5;
+}
+
+.alternate {
+  display: none;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #c344f5,
+    0 0 82px #c344f5, 0 0 92px #c344f5, 0 0 102px #c344f5, 0 0 151px #c344f5;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 6.2rem;
+  animation: pulsate 1.5s infinite alternate;
+  padding: 0.4em;
+}
+
+@keyframes pulsate {
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #bc13fe,
+      0 0 80px #bc13fe, 0 0 90px #bc13fe, 0 0 100px #bc13fe, 0 0 150px #bc13fe;
+  }
+
+  0% {
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #bc13fe,
+      0 0 45px #bc13fe, 0 0 55px #bc13fe, 0 0 70px #bc13fe, 0 0 80px #bc13fe;
+  }
+}
+
+/****************************
+    START GAME BUTTON
+*****************************/
+
+.button-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #cf13eb;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.3s;
+  border: #bc13fe;
+  font-family: "Press Start 2P", cursive;
+}
+
+#button {
+  box-shadow: 0 0 0.1vw 0.2vw #fff7f7, 0 0 0.4vw 0.3vw #bc13fe,
+    0 0 4vw 0.2vw #bc13fe, inset 0 0 1.5vw 0.4vw #bc13fe,
+    inset 0 0 0.4vw 0.2vw #bc13fe, inset 0 0 0.5vw 0.2vw #fff7f7;
+  border-radius: 2%;
+}
+
+#button:hover {
+  color: #ffffff;
+  background: #bc13fe;
+  box-shadow: 0 0 10px #bc13fe, 0 0 40px #bc13fe, 0 0 80px #bc13fe;
+}
+
+@media (max-width: 539px) {
+  .navbar {
+    color: white;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: right; */
+    height: 50px;
+    float: right;
+    /* padding-right: 30px; */
+    width: 40%;
+  }
+
+  .burger-menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-links ul {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 2vh;
+    /* margin-right: 5vw; */
+  }
+
+  .nav-links li:hover {
+    color: #c344f5;
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+
+  .nav-links li a {
+    margin-right: 17vw;
+    padding: 0.2vh;
+    font-size: 10px;
+  }
+
+  .RSP-brandname {
+    margin-left: 20vw;
+    margin-top: 10vh;
+    padding-bottom: 0vh;
+    font-size: 25px;
+    /* padding-left: 3vw; */
+    display: inline-block;
+    color: #fff;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #c344f5,
+      0 0 82px #c344f5, 0 0 92px #c344f5, 0 0 102px #c344f5, 0 0 151px #c344f5;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 10vw;
+  }
+
+  .active {
+    display: flex;
+  }
+
+  #home-icon,
+  #history-icon,
+  #rule-icon {
+    display: flex;
+    padding-left: 170px;
+  }
+
+  #home,
+  #gamerules,
+  #gamehistory {
+    display: flex;
+    color: #ffffff;
+    text-shadow: 0 0 15px #f1f9f9;
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 70px;
+    /* changes the icon position */
+    justify-content: center;
+  }
+
+  .neonText {
+    display: none;
+  }
+
+  .alternate {
+    display: inline-block;
+    font-size: 28px;
+  }
+
+  #alternate-rock {
+    margin-top: 18vh;
+    margin-left: 32vw;
+  }
+
+  #alternate-paper {
+    margin-left: 32vw;
+  }
+
+  #alternate-scissors {
+    margin-left: 26vw;
+  }
+
+  .button-container {
+    margin-top: 6vh;
+  }
+
+  #button {
+    font-size: 8px;
+  }
+
+  #button {
+    margin-top: 0vh;
+  }
+
+  #form {
+    font-family: "Press Start 2P", cursive;
+
+    text-align: center;
+    margin-top: 15vh;
+  }
+
+  #entername {
+    color: antiquewhite;
+    font-size: 8px;
+  }
+
+  #username {
+    display: inline;
+    height: 2vh;
+    width: 40vw;
+    background-color: #f0f6f6;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 599px) {
+  .navbar {
+    color: white;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: right; */
+    height: 50px;
+    float: right;
+    /* padding-right: 30px; */
+    width: 40%;
+  }
+
+  .burger-menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-links ul {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 2vh;
+    /* margin-right: 5vw; */
+  }
+
+  .nav-links li:hover {
+    color: #c344f5;
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+
+  .nav-links li a {
+    margin-right: 17vw;
+    padding: 0.2vh;
+    font-size: 10px;
+  }
+
+  .RSP-brandname {
+    margin-left: 20vw;
+    margin-top: 10vh;
+    padding-bottom: 0vh;
+    font-size: 25px;
+    /* padding-left: 3vw; */
+    display: inline-block;
+    color: #fff;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #c344f5,
+      0 0 82px #c344f5, 0 0 92px #c344f5, 0 0 102px #c344f5, 0 0 151px #c344f5;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 10vw;
+  }
+
+  .active {
+    display: flex;
+  }
+
+  #home-icon,
+  #history-icon,
+  #rule-icon {
+    display: flex;
+    padding-left: 170px;
+  }
+
+  #home,
+  #gamerules,
+  #gamehistory {
+    display: flex;
+    color: #ffffff;
+    text-shadow: 0 0 15px #f1f9f9;
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 70px;
+    /* changes the icon position */
+    justify-content: center;
+  }
+
+  .neonText {
+    display: none;
+  }
+
+  .alternate {
+    display: inline-block;
+    font-size: 28px;
+  }
+
+  #alternate-rock {
+    margin-top: 18vh;
+    margin-left: 38vw;
+  }
+
+  #alternate-paper {
+    margin-left: 38vw;
+  }
+
+  #alternate-scissors {
+    margin-left: 34vw;
+  }
+
+  .button-container {
+    margin-top: 6vh;
+  }
+
+  #button {
+    font-size: 8px;
+  }
+
+  #button {
+    margin-top: 0vh;
+  }
+
+  #form {
+    font-family: "Press Start 2P", cursive;
+
+    text-align: center;
+    margin-top: 15vh;
+  }
+
+  #entername {
+    color: antiquewhite;
+    font-size: 8px;
+  }
+
+  #username {
+    display: inline;
+    height: 2vh;
+    width: 40vw;
+    background-color: #f0f6f6;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 770px) {
+  #form {
+    font-family: "Press Start 2P", cursive;
+
+    text-align: center;
+    margin-top: 80px;
+  }
+
+  body {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 771px) and (max-width: 950px) {
+  body {
+    height: 120vh;
+  }
+}

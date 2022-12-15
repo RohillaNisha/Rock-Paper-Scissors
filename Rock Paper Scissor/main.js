@@ -9,14 +9,19 @@ const showIcon = document.querySelector(".showYou i");
 const computerShowIcon = document.querySelector(".showComputer i");
 const buttons = document.querySelectorAll(".selection button");
 
+let winner;
+let myArray = [];
+
 function getComputerChoice() {
   let choices = ["rock", "paper", "scissors"];
   let randomNumber = Math.floor(Math.random() * 3);
+  myArray.push(choices[randomNumber]);
   return choices[randomNumber];
 }
 
 function win() {
   playerScore++;
+  myArray.push("player");
   resultDisplay.innerHTML = "You win!";
   document.querySelector("#playerScore").innerHTML = playerScore;
   document.querySelector("#computerScore").innerHTML = computerScore;
@@ -25,13 +30,15 @@ function win() {
 
 function lose() {
   computerScore++;
-  resultDisplay.innerHTML = "You loose!";
+  myArray.push("computer");
+  resultDisplay.innerHTML = "You lose!";
   document.querySelector("#playerScore").innerHTML = playerScore;
   document.querySelector("#computerScore").innerHTML = computerScore;
   playerScoreCount();
 }
 
 function tie(userChoice, computerChoice) {
+  myArray.push("Draw");
   resultDisplay.innerHTML = "Draw!!";
   document.querySelector("#playerScore").innerHTML = playerScore;
   document.querySelector("#computerScore").innerHTML = computerScore;
@@ -66,33 +73,19 @@ function game(userChoice) {
       tie(userChoice, computerChoice);
       break;
   }
-  console.log(userChoice + computerChoice);
+  localStorage.setItem("array", JSON.stringify(myArray));
 }
 
 function main() {
- 
-
-/*   let numbeOfButtons = document.querySelectorAll(".button").length;
-
-  for (let i = 0; i < numberOfButtons; i++){
-    document.querySelectorAll(".button")[i].addEventListener("click", function(){
-     let clickedBtn = event.target.className;
-      showIcon.className = clickedBtn;
-      game(event.target.id);
-  }
-
-   */
- 
-
-buttons.forEach((btn) => {
+  buttons.forEach((btn) => {
     btn.addEventListener("click", (event) => {
       let clickedBtn = event.target.className;
       showIcon.className = clickedBtn;
+      myArray.push(event.target.id);
       game(event.target.id);
     });
   });
 }
-
 
 main();
 
@@ -103,14 +96,24 @@ function restartGame() {
 function playerScoreCount() {
   if (playerScore >= 3) {
     resultDisplay.innerHTML = "You are a champion!";
-    let audiowin = new Audio("applause.wav");
+    let h = document.createElement("h1");
+    h.textContent = "Press on history to see your score";
+    h.setAttribute("id", "h1");
+    document.querySelector("body").appendChild(h);
+
+    let audiowin = new Audio("./audio/you-won.mp3");
     audiowin.play();
     document.getElementById("rock").disabled = true;
     document.getElementById("paper").disabled = true;
     document.getElementById("scissors").disabled = true;
   } else if (computerScore >= 3) {
     resultDisplay.innerHTML = "Computer beats you!";
-    let audiolose = new Audio("lose.wav");
+    let h = document.createElement("h1");
+    h.textContent = "Go to Game History tab to see your game history. ";
+    h.setAttribute("id", "h1");
+    document.querySelector("body").appendChild(h);
+
+    let audiolose = new Audio("./audio/game-over.mp3");
     audiolose.play();
     document.getElementById("rock").disabled = true;
     document.getElementById("paper").disabled = true;
@@ -118,34 +121,13 @@ function playerScoreCount() {
   }
 }
 
-// hover effects on icons at homepage
-let rk = document.getElementById("rock");
-let ppr = document.getElementById("paper");
-let sc = document.getElementById("scissors");
-let rknm = document.getElementById("rockname");
-let pprnm = document.getElementById("papername");
-let scnm = document.getElementById("scissorsname");
+// function navbar() {
+//   document.getElementById("home").display = "block";
+//   document.getElementById("gamerules").display = "block";
+//   document.getElementById("gamehistory").display = "block";
+// }
 
-let iconrk = document.getElementById("rock");
-let iconppr = document.getElementById("paper");
-let iconscr = document.getElementById("scissors");
-
-iconrk.addEventListener("mouseover", handleEvent);
-iconppr.addEventListener("mouseover", handleEvent);
-iconscr.addEventListener("mouseover", handleEvent);
-
-function handleEvent(event) {
-  if (event.target.id == "rock") {
-    rknm.style.visibility = "visible";
-    rknm.style.color = "#00f3ff";
-    rknm.style.textShadow = "0 0 15px #00f3ff";
-  } else if (event.target.id == "paper") {
-    pprnm.style.visibility = "visible";
-    pprnm.style.color = "greenyellow";
-    pprnm.style.textShadow = "0 0 15px greenyellow";
-  } else if (event.target.id == "scissors") {
-    scnm.style.visibility = "visible";
-    scnm.style.color = "red";
-    scnm.style.textShadow = "0 0 15px red";
-  }
+function burgerMenu() {
+  const navLinks = document.getElementsByClassName("nav-links")[0];
+  navLinks.classList.toggle("active");
 }
