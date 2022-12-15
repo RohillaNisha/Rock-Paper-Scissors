@@ -4,13 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock Paper Scissors</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Sacramento:400"
-      rel="stylesheet"
-      type="text/css"
-    />
-
+    <link rel="stylesheet" href="rules.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -18,9 +12,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="intro.css" />
-  </head>
 
+    <title>Rock Paper Scissor</title>
+  </head>
   <body>
     <div class="container-home">
       <nav class="navbar">
@@ -42,37 +36,28 @@
           </ul>
         </div>
       </nav>
-      </div>
-
-    <div class="title-intro">
-      <h1 class="neonText" class="neon">ROCK PAPER SCISSORS</h1>
-      <h1 class="alternate" id="alternate-rock">ROCK</h1>
-      <h1 class="alternate" id="alternate-paper">PAPER</h1>
-      <h1 class="alternate" id="alternate-scissors">SCISSORS</h1>
     </div>
 
-    <form id="form">
-      <label for="name" id="entername"> Enter your name: </label>
-      <input type="text" id="username" required />
+    <div class="rules-container">
+      <h1 class="rules-title">Rules of Rock Paper Scissors</h1>
+      <h1 class="alternate-title">Game Rules</h1>
+      <div class="rules-paragraph">
+        <p class="rules-text">
+          You play the game by choosing hand signals, that beats your computer's
+          choise.
+        </p>
 
-      <div class="button-container">
-        <button type="submit" id="button">Start Game</button>
+        <ul class="rules-list">
+          <li>Rock wins against scissors.</li>
+          <li>Scissors win against paper.</li>
+          <li>Paper wins against rock.</li>
+        </ul>
       </div>
-    </form>
+
+      <div class="gif">
+        <img src="./images/giphy.gif" alt="gif" />
+      </div>
+    </div>
   </body>
-  <script>
-    const form = document.getElementById("form");
-    const username = document.getElementById("username");
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const playerName = username.value;
-
-      localStorage.setItem("player-name", playerName);
-
-      window.location.href = "game.html";
-    });
-  </script>
   <script src="main.js"></script>
 </html>

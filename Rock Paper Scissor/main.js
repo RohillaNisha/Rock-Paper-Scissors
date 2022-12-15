@@ -21,23 +21,29 @@ function getComputerChoice() {
 
 function win() {
   playerScore++;
+  if (playerScore >= 3) {
+    playerWinnerWithAudio();
+  }
   myArray.push("player");
   resultDisplay.innerHTML = "You win!";
   document.querySelector("#playerScore").innerHTML = playerScore;
   document.querySelector("#computerScore").innerHTML = computerScore;
-  playerScoreCount();
+  
 }
 
 function lose() {
   computerScore++;
+  if (computerScore >= 3) {
+    computerWinnerWithAudio();
+  }
   myArray.push("computer");
   resultDisplay.innerHTML = "You lose!";
   document.querySelector("#playerScore").innerHTML = playerScore;
   document.querySelector("#computerScore").innerHTML = computerScore;
-  playerScoreCount();
+
 }
 
-function tie(userChoice, computerChoice) {
+function tie() {
   myArray.push("Draw");
   resultDisplay.innerHTML = "Draw!!";
   document.querySelector("#playerScore").innerHTML = playerScore;
@@ -94,33 +100,36 @@ function restartGame() {
 }
 
 
+function burgerMenu() {
+  const navLinks = document.getElementsByClassName("nav-links")[0];
+  navLinks.classList.toggle("active");
+}
 
 
-function playerScoreCount() {
+function playerWinnerWithAudio(){
+  resultDisplay.innerHTML = "You are a champion!";
+  let h = document.createElement("h1");
+  h.textContent = "Go to History tab to see your game history. ";
+  h.setAttribute("id", "h1");
+  document.querySelector("body").appendChild(h);
 
-  if (playerScore >= 3) {
-    resultDisplay.innerHTML = "You are a champion!";
-    let h = document.createElement("h1");
-    h.textContent = "Press on history to see your score";
-    h.setAttribute("id", "h1");
-    document.querySelector("body").appendChild(h);
+  let audiowin = new Audio("./audio/you-won.mp3");
+  audiowin.play();
+  document.getElementById("rock").disabled = true;
+  document.getElementById("paper").disabled = true;
+  document.getElementById("scissors").disabled = true;
+}
 
-    let audiowin = new Audio("./audio/you-won.mp3");
-    audiowin.play();
-    document.getElementById("rock").disabled = true;
-    document.getElementById("paper").disabled = true;
-    document.getElementById("scissors").disabled = true;
-  } else if (computerScore >= 3) {
-    resultDisplay.innerHTML = "Computer beats you!";
-    let h = document.createElement("h1");
-    h.textContent = "Go to Game History tab to see your game history. ";
-    h.setAttribute("id", "h1");
-    document.querySelector("body").appendChild(h);
+function computerWinnerWithAudio(){
+  resultDisplay.innerHTML = "Computer beats you!";
+  let h = document.createElement("h1");
+  h.textContent = "Go to History tab to see your game history. ";
+  h.setAttribute("id", "h1");
+  document.querySelector("body").appendChild(h);
 
-    let audiolose = new Audio("./audio/game-over.mp3");
-    audiolose.play();
-    document.getElementById("rock").disabled = true;
-    document.getElementById("paper").disabled = true;
-    document.getElementById("scissors").disabled = true;
-  }
+  let audiolose = new Audio("./audio/game-over.mp3");
+  audiolose.play();
+  document.getElementById("rock").disabled = true;
+  document.getElementById("paper").disabled = true;
+  document.getElementById("scissors").disabled = true;
 }
