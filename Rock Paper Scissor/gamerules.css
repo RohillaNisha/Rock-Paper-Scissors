@@ -1,155 +1,343 @@
-
 /****************************
 GAME RULES
 *****************************/
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); 
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-
-
-.gif{
-display: flex;
-justify-content: center; 
-margin-top: 40px;
-
-
+.gif {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 
-img{
-    border: 4px solid #374650, 176, 234;
-    box-shadow: 0 0 15px #134b9f;
-    border-radius: 2%;
+img {
+  border: 4px solid #374650, 176, 234;
+  box-shadow: 0 0 15px #134b9f;
+  border-radius: 2%;
 
-    width: 400px;
-    height: auto;
-}
-
-.rule-titles{
-    text-align: center;
-    
-
-}
-
-body {
-    color: white;
-    margin: 50px;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #18191f;
-    border-radius: 10px;
-    height: 800px;
-    box-shadow:
-        0 0 0.1vw 0.2vw #fff7f7,
-        0 0 0.4vw 0.3vw #1f1f91,
-        0 0 4vw 0.2vw #04284f,
-
-        inset 0 0 1.5vw 0.4vw #0b95e5,
-        inset 0 0 0.4vw 0.2vw #7284e9,
-        inset 0 0 0.5vw 0.2vw #fff7f7;
-    border-radius: 0.2%;
-
+  width: 400px;
+  height: auto;
 }
 
 .rule-titles {
-    font-family: 'Press Start 2P', cursive;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-    margin-left: 3rem;
-    font-size: 24px;
-    letter-spacing: 2px;
-    /* color: #ffffff;
+  text-align: center;
+}
+
+.alternate-title {
+  display: none;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  box-sizing: border-box;
+  background-color: #18191f;
+  border-radius: 10px;
+}
+
+body {
+  height: 100vh;
+  box-shadow: 0 0 0.1vw 0.2vw #fff7f7, 0 0 0.4vw 0.3vw #1f1f91,
+    0 0 4vw 0.2vw #04284f, inset 0 0 1.5vw 0.4vw #0b95e5,
+    inset 0 0 0.4vw 0.2vw #7284e9, inset 0 0 0.5vw 0.2vw #fff7f7;
+  border-radius: 0.2%;
+}
+
+/* 
+body {
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: #18191f;
+  border-radius: 10px;
+  box-shadow: 0 0 0.1vw 0.2vw #fff7f7, 0 0 0.4vw 0.3vw #1f1f91,
+    0 0 4vw 0.2vw #04284f, inset 0 0 1.5vw 0.4vw #0b95e5,
+    inset 0 0 0.4vw 0.2vw #7284e9, inset 0 0 0.5vw 0.2vw #fff7f7;
+  border-radius: 0.2%;
+} */
+
+.rule-titles {
+  font-family: "Press Start 2P", cursive;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  /* margin-left: 3rem; */
+  font-size: 24px;
+  letter-spacing: 2px;
+  /* color: #ffffff;
     text-shadow: 0 0 15px #8d808b; */
 }
 
-.rules-text , .rules {
-    font-size: 18px;
-    margin-left: 6rem;
-    font-family: 'Press Start 2P', cursive;
-    line-height: 30px;
- 
+.rules-text,
+.rules {
+  font-size: 18px;
+  margin-left: 6rem;
+  font-family: "Press Start 2P", cursive;
+  line-height: 30px;
 }
 
-.rules-paragraph{
-    width: 100%;
-    height: 250px;
-    margin: auto auto;
-
+.rules-paragraph {
+  width: 100%;
+  height: 250px;
+  margin: auto auto;
 }
 
-.rules{
-    padding: 4px;
-    
+.rules {
+  padding: 4px;
 }
-
-
-
 
 /****************************
         NAV BAR
 *****************************/
 
 .navbar {
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    height: 50px;
-    width: 100%;
-    align-items: center;
-    padding-top: 20px;
+  color: white;
+  /* display: flex;
+  justify-content: space-around; */
+  height: 50px;
+  width: 100%;
+  /* align-items: center; */
+  padding-top: 20px;
+}
 
+.burger-menu {
+  display: none;
+
+}
+
+
+.RSP-brandname {
+  display: none;
+}
+
+.nav-links {
+  /* display: flex; */
+  /* justify-content: space-around; */
+}
+
+.nav-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  /* border: 1px dotted white; */
+  align-items: flex-end;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a:hover {
+  color: #c344f5;
 }
 
 #home-icon,
 #history-icon,
 #rule-icon {
+  margin-right: 10px;
+}
 
-    margin-right: 10px;
+a {
+  color: #ffffff;
+  text-shadow: 0 0 15px #f1f9f9;
+  font-weight: bold;
+  font-size: 25px;
+  text-decoration: none;
+  text-align: right;
+  margin-right: 0px;
+  /* padding: 1rem; */
 }
 
 
 
+@media (max-width: 599px) {
 
-a {
+  .alternate-title {
+
+    display: inline-block;
+    margin-left: 10vw;
+    font-family: "Press Start 2P", cursive;
+    font-size: 20px;
+    margin-top: 8vh;
+
+  }
+
+  .rule-titles {
+    display: none;
+    font-size: 15px;
+
+    /* margin-bottom: 6vh; */
+  }
+
+  .rules-paragraph {
+    height: 10vh;
+    font-size: 10px;
+  }
+
+  /*  img{
+    border: yellow 1px solid;
+  }  */
+
+  .gif {
+
+    width: 54vw;
+    height: 20vh;
+    margin-top: 55vw;
+    margin-left: 12vh;
+  }
+
+  .rules-text {
+    margin-left: 5vh;
+    font-size: 11px;
+    margin-top: 8vh;
+    margin-bottom: 2vh;
+  }
+
+  .rules {
+    margin-left: 8vh;
+    font-size: 10px;
+
+  }
+  .navbar {
+
+    color: white;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: right; */
+    height: 50px;
+    float: right;
+    /* padding-right: 30px; */
+    width: 40%;
+  }
+
+  .burger-menu {
+
+    display: flex;
+    justify-content: center;
+
+  }
+
+
+
+  .nav-links ul {
+
+    width: 100%;
+    flex-direction: column;
+    margin-top: 2vh;
+    /* margin-right: 5vw; */
+  }
+
+  .nav-links li:hover {
+    color: #c344f5;
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+
+  .nav-links li a {
+    margin-right: 17vw;
+    padding: 0.2vh;
+    font-size: 10px;
+  }
+
+  .RSP-brandname {
+    margin-left: 20vw;
+    margin-top: 10vh;
+    padding-bottom: 0vh;
+    font-size: 25px;
+    /* padding-left: 3vw; */
+    display: inline-block;
+    color: #fff;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #c344f5,
+      0 0 82px #c344f5, 0 0 92px #c344f5, 0 0 102px #c344f5, 0 0 151px #c344f5;
+  }
+
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 10vw;
+  }
+
+  .active {
+    display: flex;
+  }
+
+  #home-icon,
+  #history-icon,
+  #rule-icon {
+    display: flex;
+    padding-left: 170px;
+  }
+
+  #home,
+  #gamerules,
+  #gamehistory {
+    display: flex;
     color: #ffffff;
     text-shadow: 0 0 15px #f1f9f9;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 12px;
     text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 70px;
+    /* changes the icon position */
+    justify-content: center;
+  }
+
+
 }
 
+@media (min-width: 600px) and (max-width: 1030px) {
 
 
-#rock-img {
-    grid-area: photo1;
+  .rule-titles {
+
+    display: inline-block;
+    font-size: 35px;
+    margin-left: 5vw;
+    margin-top: 10vh;
+    line-height: 4vh;
+  }
+
+  .rules-paragraph {
+    margin-top: 5vh;
+
+  }
+
+  .gif {
+
+    width: 54vw;
+    height: 20vh;
+    margin-top: 10vw;
+    margin-left: 12vh;
+  }
+
+  .rules-text {
+    margin-left: 5vh;
+    font-size: 17px;
+    margin-top: 0vh;
+    margin-bottom: 2vh;
+  }
+
+  .rules {
+    margin-left: 8vh;
+    font-size: 16px;
+
+  }
+
+
+
+
+
+
+
+
+
 }
-
-#paper-img {
-    grid-area: photo2;
-}
-
-#scissors-img {
-    grid-area: photo3;
-}
-
-.symbol-rock {
-    grid-area: name1;
-    font-size: 25px;
-    align-self: center;
-}
-
-.symbol-paper {
-    grid-area: name2;
-    font-size: 25px;
-    align-self: center;
-}
-
-.symbol-scissors {
-    grid-area: name3;
-    font-size: 25px;
-    align-self: center;
-}
-
-.symbol-text1 {
-    grid-area: des1;
-    font-size: 20px;
-}
-

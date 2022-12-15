@@ -93,11 +93,7 @@ function restartGame() {
   window.location.reload();
 }
 
-
-
-
 function playerScoreCount() {
-
   if (playerScore >= 3) {
     resultDisplay.innerHTML = "You are a champion!";
     let h = document.createElement("h1");
@@ -123,4 +119,15 @@ function playerScoreCount() {
     document.getElementById("paper").disabled = true;
     document.getElementById("scissors").disabled = true;
   }
+}
+
+// function navbar() {
+//   document.getElementById("home").display = "block";
+//   document.getElementById("gamerules").display = "block";
+//   document.getElementById("gamehistory").display = "block";
+// }
+
+function burgerMenu() {
+  const navLinks = document.getElementsByClassName("nav-links")[0];
+  navLinks.classList.toggle("active");
 }
